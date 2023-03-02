@@ -11,9 +11,9 @@ import java.io.IOException;
 
 public class MainServlet extends HttpServlet {
   private PostController controller;
-  final String GET = "GET";
-  final String POST = "POST";
-  final String DELETE = "DELETE";
+  public static final String GET = "GET";
+  public static final String POST = "POST";
+  public static final String DELETE = "DELETE";
 
   @Override
   public void init() {
