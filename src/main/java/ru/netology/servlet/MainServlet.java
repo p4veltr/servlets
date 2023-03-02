@@ -11,6 +11,9 @@ import java.io.IOException;
 
 public class MainServlet extends HttpServlet {
   private PostController controller;
+  final String GET = "GET";
+  final String POST = "POST";
+  final String DELETE = "DELETE";
 
   @Override
   public void init() {
@@ -21,9 +24,6 @@ public class MainServlet extends HttpServlet {
 
   @Override
   protected void service(HttpServletRequest req, HttpServletResponse resp) {
-    final String GET = "GET";
-    final String POST = "POST";
-    final String DELETE = "DELETE";
     // если деплоились в root context, то достаточно этого
     try {
       final var path = req.getRequestURI();
